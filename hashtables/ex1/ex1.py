@@ -19,10 +19,10 @@ def get_indices_of_item_weights(weights, length, limit):
         
         
     for x in range(length):
-        retrieved_pair = hash_table_retrieve(ht, weights[x])
-        temp = limit - retrieved_pair
-        if (temp in weights):
-            print(temp, retrieved_pair)
+        temp = limit - weights[x]
+        retrieved_pair = hash_table_retrieve(ht, temp)
+        if retrieved_pair:
+            return (retrieved_pair, x)
             
 
 
