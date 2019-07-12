@@ -18,9 +18,12 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht, weights[x], x)
         
         
-    for y in range(length):
-        retrieved_pair = hash_table_retrieve(ht, weights[y])
-
+    for x in range(length):
+        retrieved_pair = hash_table_retrieve(ht, weights[x])
+        temp = limit - retrieved_pair
+        if (temp in weights):
+            print(temp, retrieved_pair)
+            
 
 
     """
@@ -36,8 +39,8 @@ def print_answer(answer):
     else:
         print("None")
 
-arrray = [5, 2, 3, 7, 5, 6]
+# arrray = [5, 2, 3, 7, 5, 6]
 
-for x in range(len(arrray)):
-    print(x)
-    print(arrray[x])
+# for x in range(len(arrray)):
+#     print(x)
+#     print(arrray[x])
